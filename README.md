@@ -61,6 +61,9 @@ ____________________
   returns some meaningful formatted values for columns other than those explicitly handled.
 <br>
 <br>
+
+### Postmand Request and Response Example
+________________________________________
   <img src="/Users/badripaudel/screen_shots/Screen Shot 2023-09-19 at 4.42.23 PM.png"/>
 
 1. <span>In the screenshot example above, inside of the headers key, we have other nested keys, namely, email, phone, name, address, dummy and these are essentially excel files' header name.</span>
