@@ -3,9 +3,9 @@ _______________________
 ### **About**
 
 - This is an application (web-service) that allows one to generate and download file(excel for now) 
-based on dynamic no of columns at runtime and certain configuration values such as prefix for email,phone and so on.
-- This is the backend service available at the endpoint /api/v1/fileGenerator/download which receives 
-  the payload that differs from the user to user at run time. Payload example is as follows: 
+based on dynamic number of columns(headers) at runtime and certain configuration values such as prefix, postfix, and some values as per the users' requirements.
+- This is the backend service available at the endpoint ```/api/v1/fileGenerator/download``` which receives 
+  the payload that differs from one user to another user at run time. Payload example is as follows: 
   ```json
    {
     "fileType": "",
@@ -48,8 +48,9 @@ _____________
  grow and shrink based on the user's requirements, it is very 
  hard to determine and return the exact type or the exact format 
  while filling the excel file. For instance, when user adds address as the name of 
- of the header column, not sure how to determine the value for this column. **Furthermore**, using ```if else``` is cumbersome and it never meets the requirements.
- Another example, could be let us say user entered the completely uncommon header, then addressing with if else also becomes almost not feasible and type of data would just look too random and additionally not meaningful even though it will contain some type of random data.
+ of the header column, not sure how to determine the value for this column(definitely it does, I am just talking about the exact format of the data not just some random string value). **Furthermore**, using ```if else``` is cumbersome and it never meets the requirements for all the possible values that users may enter.
+ Another example could be, let us say user entered the completely uncommon header, then addressing with if else also becomes almost not feasible and type of data would just look too random and additionally not meaningful even though it will contain some type of random data.
+- **It works perfectly now, just the exact desired value when user doesn't fill some prefix, postfix values on the app, i.e just enters the column name, and nothing else, that time, it is very hard to know what format of data user wants**.
 <br/>
 <br/>
 
