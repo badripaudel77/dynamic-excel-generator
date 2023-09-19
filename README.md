@@ -64,7 +64,7 @@ ____________________
 
 ### Postmand Request and Response Example
 ________________________________________
-  [postman_request_response_image](https://github.com/badripaudel77/the-file-generator/issues/1)
+  ![Postman Request Response Example Screenshot](https://github.com/badripaudel77/the-file-generator/issues/1)
 <br>
 
 1. <span>In the screenshot example above, inside of the headers key, we have other nested keys, namely, email, phone, name, address, dummy and these are essentially excel files' header name.</span>
