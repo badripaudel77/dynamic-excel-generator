@@ -20,8 +20,6 @@ public class HeaderBuilder {
 
     public Object[] processHeader(Map<String, Object> jsonMap) {
         List<String> headers = new ArrayList<>();
-        DataManipulator dataManipulator = new DataManipulator();
-        Map<String, List<Object>> columnsInfoMap = new LinkedHashMap<>();
 
         for (Map.Entry<String, Object> entry : jsonMap.entrySet()) {
             String key = entry.getKey();
@@ -30,9 +28,7 @@ public class HeaderBuilder {
                 Map<String, Object> nestedMap = (Map<String, Object>) value;
                 for (Map.Entry<String, Object> nestedEntry : nestedMap.entrySet()) {
                     String nestedKey = nestedEntry.getKey();
-                    Object nestedValue = nestedEntry.getValue();
                     headers.add(nestedKey);
-                    columnsInfoMap.put(nestedKey, List.of(((LinkedHashMap) nestedValue).entrySet().toArray()));
                 }
             }
         }

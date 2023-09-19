@@ -23,7 +23,7 @@ public class DataManipulator {
             // Iterate over the headers configuration and generate data for each field
             for (Map.Entry<String, Map<String, Object>> entry : headersConfig.entrySet()) {
                 Map<String, Object> fieldConfig = entry.getValue();
-                String fieldType = (String) fieldConfig.get("type");
+                String fieldType = fieldConfig.get("type") != null ? (String) fieldConfig.get("type") : "string";
                 // Generate data based on field type and configuration
                 String prefix = fieldConfig.get("prefix") != null ? ((String) fieldConfig.get("prefix")).trim() : "";
                 String postfix = fieldConfig.get("postfix") != null ? ((String) fieldConfig.get("postfix")).trim() : "";
@@ -41,20 +41,22 @@ public class DataManipulator {
 
     private String formatValue(String prefix, String postfix, String value, String fieldType, Integer i, Integer j, Integer index) {
         String formattedValue = "";
+        DataFaker dataFaker = new DataFaker();
         switch (fieldType) {
             case "email":
-                formattedValue = prefix + "" +  value + j + "" + j + "" + index + ""+ i + "@" + postfix; // abc222@test.io prefix : abc, value 222@
+                // csed-amigo2240@abc.io [csed- => prefix, amigo => value, abc.io => postfix]
+                formattedValue = prefix + "" +  value + j + "" + j + "" + index + ""+ i + "@" + (postfix == null ? "abc.io" : postfix);
                 break;
             case "phone":
-                formattedValue = prefix + " "+ value + j + "" + index + "" + i;
+                formattedValue = prefix + " "+ dataFaker.getRandomPhoneNumber();
                 break;
             case "name":
-                String name = prefix + " " + value + " " + postfix;
-                formattedValue = name != null ? name : "Demo Name" + i + "" + j + "" + index;
+                String name = prefix + " " + value + " " + j + " " + j + i + " " + index + postfix;
+                formattedValue = name != null ? name : dataFaker.getName();
                 break;
             default:
-                String defaultColumnValue = prefix + " " + value + " " + postfix;
-                formattedValue = defaultColumnValue != null ? defaultColumnValue : "Demo Value" + i + "" + j + "" + index;
+                String defaultColumnValue = prefix + " " + value + " " + j + " " + j + i + " " + index +  " " + postfix;
+                formattedValue = defaultColumnValue;
                 break;
         }
         return formattedValue;
