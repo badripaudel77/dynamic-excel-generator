@@ -65,7 +65,7 @@ ____________________
 
 ### Postmand Request and Response Example
 ________________________________________
-  ![Postman Request Response Example Screenshot](https://private-user-images.githubusercontent.com/40663560/268944666-40749bd0-c4f4-4e0b-8421-4cca3340a458.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTEiLCJleHAiOjE2OTUxMzI5NTYsIm5iZiI6MTY5NTEzMjY1NiwicGF0aCI6Ii80MDY2MzU2MC8yNjg5NDQ2NjYtNDA3NDliZDAtYzRmNC00ZTBiLTg0MjEtNGNjYTMzNDBhNDU4LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFJV05KWUFYNENTVkVINTNBJTJGMjAyMzA5MTklMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjMwOTE5VDE0MTA1NlomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWE3NjM2ZDU2OWIyMzkxMWIzZjBjNGRmYTk4MTg0N2EyNjBkNDQ3MDFhZmE1ZWJhMzg2YTQ5OWI2ZWNjYmZmNzEmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.TXPvsIbcnTAQG7lRA96k6K3AD1_Uk0DBW_UDzPmj9SI)
+  ![Postman Request Response Example Screenshot](https://user-images.githubusercontent.com/40663560/269028708-8401bfb6-8e48-4b4e-ac18-03884fbcb530.png)
 <br>
 
 1. <span>In the screenshot example above, inside of the headers key, we have other nested keys, namely, email, phone, name, address, dummy and these are essentially excel files' header name.</span>
