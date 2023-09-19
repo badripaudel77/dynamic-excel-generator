@@ -84,7 +84,7 @@ ________________________________________
 In such case, one of the example emails which would be generated is cse-111222@ubc.com, where 111222 will be some randomly generated value. If we include value as well, it will just be appended to the prefix.
 
 #### Example CURL request :  
-```json
+```curl
 curl -X POST http://localhost:8080/api/v1/fileGenerator/download \
 -H "Content-Type: application/json" \
 -d '{
