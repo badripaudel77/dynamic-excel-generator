@@ -67,15 +67,21 @@ ____________________
 2. This key will be as many as we put and headers will be generated accordingly.
 3. Inside of the each key, we have other key such as type, prefix, postfix, these are fundamentally, extra configurations for the value of the header to be generated. 
   For instance, if email has following structure : 
-  **"email" : { 
-           "type" : "email",
-           "prefix": "cse-",
-           "postfix" : "ubc.com"
-      }** <br>
+  ```json
+ {
+  "email" : {
+      "type" : "email",
+      "prefix": "cse-",
+      "postfix" : "ubc.com",
+      "value": "some_value"
+   }
+}
+```
 In such case, one of the example emails which would be generated is cse-111222@ubc.com, where 111222 will be some randomly generated value. If we include value as well, it will just be appended to the prefix.
 
 #### Example CURL request :  
-``` curl -X POST http://localhost:8080/api/v1/fileGenerator/download \
+```json
+curl -X POST http://localhost:8080/api/v1/fileGenerator/download \
 -H "Content-Type: application/json" \
 -d '{
     "fileType": "",
