@@ -92,7 +92,7 @@ docker pull badripaudel77/dynamic-excel-generator
 ```
 - To run the docker image, run the following command
 ```commandline
- docker run -p 8080:8080 dynamic-excel-generator
+ docker run -p 8080:8080 badripaudel77/dynamic-excel-generator:latest
 ```
 - Finally, send the CURL request to run the application as follows:
 ```curl
