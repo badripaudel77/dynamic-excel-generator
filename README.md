@@ -84,7 +84,17 @@ ________________________________________
 ```
 In such case, one of the example emails which would be generated is cse-111222@ubc.com, where 111222 will be some randomly generated value. If we include value as well, it will just be appended to the prefix.
 
-#### Example CURL request :  
+#### Example CURL request 
+#### Either run locally or pull the docker image and hit the following request
+- To pull the docker image from docker hub, use following command:
+```commandline
+docker pull badripaudel77/dynamic-excel-generator
+```
+- To run the docker image, run the following command
+```commandline
+ docker run -p 8080:8080 dynamic-excel-generator
+```
+- Finally, send the CURL request to run the application as follows:
 ```curl
 curl -X POST http://localhost:8080/api/v1/fileGenerator/download \
 -H "Content-Type: application/json" \
